@@ -1,11 +1,23 @@
 package br.com.akira.usuario;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
 import br.com.akira.basica.Basica;
 
+@Entity
+@Table(name = "usuario")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@AttributeOverrides(value = { @AttributeOverride(name = "id", column = @Column(name = "id")), })
 public class Usuario extends Basica {
 
 	private String usuario;
-	private Double senha;
+	private String senha;
 	private String nome;
 
 	public String getUsuario() {
@@ -16,11 +28,11 @@ public class Usuario extends Basica {
 		this.usuario = usuario;
 	}
 
-	public Double getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(Double senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 

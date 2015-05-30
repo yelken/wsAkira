@@ -1,13 +1,26 @@
 package br.com.akira.avaliacao;
 
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
 import br.com.akira.basica.Basica;
 import br.com.akira.tipo.TipoProblema;
 
+@Entity
+@Table(name = "avaliacao")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@AttributeOverrides(value = { @AttributeOverride(name = "id", column = @Column(name = "id")), })
 public class Avaliacao extends Basica {
 
 	private Double latitude;
 	private Double longitude;
 	private TipoProblema tipoProblema;
+	private boolean isOk;
 
 	public Double getLatitude() {
 		return latitude;
@@ -31,6 +44,14 @@ public class Avaliacao extends Basica {
 
 	public void setTipoProblema(TipoProblema tipoProblema) {
 		this.tipoProblema = tipoProblema;
+	}
+
+	public boolean isOk() {
+		return isOk;
+	}
+
+	public void setOk(boolean isOk) {
+		this.isOk = isOk;
 	}
 
 }
