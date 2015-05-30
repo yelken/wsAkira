@@ -11,5 +11,6 @@
   <mapping class="br.com.akira.ponto.Ponto"/>
   <mapping class="br.com.akira.tipo.TipoProblema"/>
   <mapping class="br.com.akira.usuario.Usuario"/>
+  <mapping class="br.com.akira.avaliacao.Avaliacao"/>
  </session-factory>
 </hibernate-configuration>
