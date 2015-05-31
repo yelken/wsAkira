@@ -1,5 +1,6 @@
 package br.com.akira.basica;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,6 +11,7 @@ public abstract class Basica {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name = "id")
 	private Integer identifier;
 
 	public Integer getIdentifier() {

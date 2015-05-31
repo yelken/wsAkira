@@ -1,5 +1,9 @@
 package br.com.akira.ponto;
 
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -24,4 +28,18 @@ public class PontoDAO {
 			session.close();
 		}
 	}
+	
+    public List listagem(String query) {  
+    	session = ConexaoHibernate.getInstance();
+        try {  
+            Query pQuery = session.createQuery(query);
+            List lista = pQuery.list();
+            session.flush();  
+            session.close();  
+            return lista;  
+        } catch (HibernateException e) {  
+            e.printStackTrace();  
+        }  
+        return null;  
+    }  
 }
