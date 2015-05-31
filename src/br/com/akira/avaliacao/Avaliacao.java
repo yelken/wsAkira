@@ -23,8 +23,8 @@ public class Avaliacao extends Basica {
 	private Double latitude;
 	private Double longitude;
 	
-	@OneToOne(cascade = CascadeType.ALL, optional = true)
-    @JoinColumn(name = "tipo_ProblemaId", referencedColumnName="descricao", nullable = true, insertable = false, updatable = false)
+	@OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "tipo_ProblemaId")
 	private TipoProblema tipoProblema;
 	
 	private boolean isOk;

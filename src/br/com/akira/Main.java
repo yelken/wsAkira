@@ -25,11 +25,11 @@ public class Main {
 		// System.out.println("Inserido com sucesso");
 
 		Ponto p = new Ponto();
-		p.setLatitude(-8.091571337102636);
-		p.setLongitude(-8.091571337102636);
+		p.setLatitude(-8.055602);
+		p.setLongitude(-34.951265);
 		PontoDAO pdao = new PontoDAO();
 		List<Ponto> list = pdao
-				.listagem("FROM br.com.akira.ponto.Ponto");
+				.listByLatitudeLongitude(p.getLatitude(), p.getLongitude());
 
 		for (Ponto ponto : list) {
 			System.out.println(ponto.getIdentifier() + " "

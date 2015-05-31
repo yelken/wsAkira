@@ -28,18 +28,35 @@ public class PontoDAO {
 			session.close();
 		}
 	}
-	
-    public List listagem(String query) {  
-    	session = ConexaoHibernate.getInstance();
-        try {  
-            Query pQuery = session.createQuery(query);
-            List lista = pQuery.list();
-            session.flush();  
-            session.close();  
-            return lista;  
-        } catch (HibernateException e) {  
-            e.printStackTrace();  
-        }  
-        return null;  
-    }  
+
+	public List listAll(String query) {
+		session = ConexaoHibernate.getInstance();
+		try {
+			Query pQuery = session.createQuery(query);
+			List lista = pQuery.list();
+			session.flush();
+			session.close();
+			return lista;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public List listByLatitudeLongitude(Double latitude, Double longitude) {
+		session = ConexaoHibernate.getInstance();
+		try {
+			Query pQuery = session
+					.createQuery("FROM br.com.akira.ponto.Ponto p WHERE p.latitude >  "
+							+ latitude + " and p.longitude > " + longitude);
+			pQuery.setMaxResults(6);
+			List lista = pQuery.list();
+			session.flush();
+			session.close();
+			return lista;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
