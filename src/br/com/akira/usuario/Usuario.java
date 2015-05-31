@@ -19,6 +19,7 @@ public class Usuario extends Basica {
 	private String usuario;
 	private String senha;
 	private String nome;
+	private String cpf;
 
 	public String getUsuario() {
 		return usuario;
@@ -42,6 +43,14 @@ public class Usuario extends Basica {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 }

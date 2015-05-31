@@ -59,4 +59,27 @@ public class PontoDAO {
 		}
 		return null;
 	}
+
+	public List listByPath(Double latitudeFrom, Double longitudeFrom,
+			Double latitudeTo, Double longitudeTo) {
+		session = ConexaoHibernate.getInstance();
+		try {
+			Query pQuery = session
+					.createQuery("FROM br.com.akira.ponto.Ponto p WHERE p.latitude >  "
+							+ latitudeFrom
+							+ " and p.latitude < "
+							+ latitudeTo
+							+ " and p.longitude > "
+							+ longitudeFrom
+							+ " and p.longitude < " + longitudeTo);
+			pQuery.setMaxResults(10);
+			List lista = pQuery.list();
+			session.flush();
+			session.close();
+			return lista;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
