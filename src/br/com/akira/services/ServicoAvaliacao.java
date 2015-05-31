@@ -15,7 +15,7 @@ public class ServicoAvaliacao {
 	@Path("{latitude}/{longitude}/{isOK}/{tipoProblema}")
 	@GET
 	@Produces("application/xml")
-	public String getPontosAcessibilidade(
+	public String inserirAvaliacao(
 			@PathParam("latitude") Double latitude,
 			@PathParam("longitude") Double longitude,
 			@PathParam("isOK") boolean isOK,
