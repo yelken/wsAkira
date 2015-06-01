@@ -1,0 +1,36 @@
+SideWalk
+
+Público alvo: Deficiente motor
+
+Problema: Mobilidade das pessoas com deficiencia motora que hoje sofrem muito com a 
+
+Objetivo: O aplicativo tem por objetivo traçar a melhor rota para o cadeirante com pontos de acessibilidade que pode ser uma rampa, uma rua com uma boa estatistica e também permitir que o mesmo aprove ou reprove a rua ou localização especifica.
+
+Funcionalidades do aplicativo:
+
+- Traça rotas considerando os pontos de acessibilidade fazendo passo a passo;
+- Aprovar ou reprovar a rua, local, localização ou rampa;
+- Reportar problema (obstrução, buraco, ausencia de rampa);
+- Guardar os locais favoritos;
+- Cadastro dos dados do cadeirante;
+
+Desenvolvido:
+
+
+
+Visão de futuro
+
+- Calculos de velocidade e detecção buraco através de rede neural;
+- Analisador em linguagem natural de caminho que vai sugerir rotas alternativas otimizadas;
+- Fotos das reclamações e disponibilização na versão WEB;
+- Tornar o aplicativo um WAZe para cadeirante porém com foco na mobilidade;
+- Integração com o governo porém a nossa empresa será a responsável por enviar as informações de forma protocolada;
+
+
+- Mapearmos os pontos de acessibilidade na FEDERAL; (Igor Matos / Yelken)  ok
+- Terminar MVP do APP (Gustavo Paiva)
+- Fazer slide de apresentação; NÃO PRECISA
+- Treinar a apresentação;
+- Testes com o aplicativo; (Todos)
+- Colocar o APP na iTunes se possível (Gustavo Paiva)
+
