@@ -7,7 +7,7 @@
     <packaging>war</packaging>
     <version>1.0</version>
 
-    <groupId>com.google.appengine.demos</groupId>
+    <groupId>com.google.appengine.demos </groupId>
     <artifactId>appengine-try-java</artifactId>
 
         <pluginRepositories>
